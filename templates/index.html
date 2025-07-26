@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arpan | Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">ARPAN SETH</div>
+      <input type="checkbox" id="menu-toggle" hidden />
+      <label for="menu-toggle" class="menu-icon"
+        ><i class="fas fa-bars"></i
+      ></label>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div id="particles-js">
+      <section class="hero">
+        <div class="hero-left">
+          <p class="tagline">ENGINEERING INNOVATION INTO CODE</p>
+          <h1>
+            Hi, I am <span>Arpan Seth</span><br />
+            Crafting intelligent backends & AI solutions for the real world.
+          </h1>
+          <div class="buttons">
+            <a href="#contact" class="btn primary">Hire Me</a>
+            <a
+              href="{{ url_for('static', filename='my_cv.pdf') }}"
+              class="btn outline"
+              download
+              >Download CV</a
+            >
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="bg-skew"></div>
+          <img
+            src="{{ url_for('static', filename='profile.jpg') }}"
+            alt="Arpan"
+          />
+        </div>
+      </section>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-img">
+            <img
+              src="{{ url_for('static', filename='profile.jpg') }}"
+              alt="Profile Picture"
+            />
+          </div>
+          <div class="about-content">
+            <h5 class="section-subtitle">MY INTRODUCTION</h5>
+            <h2>About Me</h2>
+            <p>
+              I am Arpan Seth, an enthusiastic Computer Science undergraduate
+              from West Bengal with a strong focus on intelligent systems and
+              scalable backend architectures. I have experience building
+              real-world solutions in logistics, accessibility, and predictive
+              analytics. With a robust foundation in Python, databases, and
+              cloud platforms, I’m passionate about transforming complex ideas
+              into accessible, high-impact products.
+            </p>
+            <p>
+              <em
+                >“Innovation is solving today’s challenges with tomorrow’s
+                technology.”</em
+              >
+            </p>
+            <div class="about-details">
+              <p><strong>Name:</strong> Arpan Seth</p>
+              <p><strong>Address:</strong> Khanakul, West Bengal, India</p>
+              <p><strong>Zip code:</strong> 712406</p>
+              <p><strong>Email:</strong> arpanseth04@gmail.com</p>
+            </div>
+            <div class="interests">
+              <span><i class="fas fa-plane"></i> Travel</span>
+              <span><i class="fas fa-book"></i> Reading</span>
+              <span><i class="fas fa-futbol"></i> Cricket</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+      <h2>My Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <img
+            src="{{ url_for('static', filename='Python.png') }}"
+            class="skill-icon"
+            alt="Python"
+          />
+          <h4>Python</h4>
+        </div>
+        <div class="skill-card">
+          <img
+            src="{{ url_for('static', filename='java.png') }}"
+            class="skill-icon"
+            alt="Java"
+          />
+          <h4>Java</h4>
+        </div>
+        <div class="skill-card">
+          <img
+            src="{{ url_for('static', filename='pandas.png') }}"
+            class="skill-icon"
+            alt="Pandas"
+          />
+          <h4>Pandas</h4>
+        </div>
+        <div class="skill-card">
+          <img
+            src="{{ url_for('static', filename='Scikit_learn.png') }}"
+            class="skill-icon"
+            alt="Scikit-learn"
+          />
+          <h4>Scikit-learn</h4>
+        </div>
+        <div class="skill-card">
+          <img
+            src="{{ url_for('static', filename='TensorFlow.png') }}"
+            class="skill-icon"
+            alt="TensorFlow"
+          />
+          <h4>TensorFlow</h4>
+        </div>
+        <div class="skill-card">
+          <img
+            src="{{ url_for('static', filename='Azure.png') }}"
+            class="skill-icon"
+            alt="Azure"
+          />
+          <h4>Azure</h4>
+        </div>
+        <div class="skill-card">
+          <img
+            src="{{ url_for('static', filename='MySQL.png') }}"
+            class="skill-icon"
+            alt="MySQL"
+          />
+          <h4>MySQL</h4>
+        </div>
+        <div class="skill-card">
+          <img
+            src="{{ url_for('static', filename='c.png') }}"
+            class="skill-icon"
+            alt="C"
+          />
+          <h4>C</h4>
+        </div>
+        <div class="skill-card">
+          <img
+            src="{{ url_for('static', filename='numpy.png') }}"
+            class="skill-icon"
+            alt="NumPy"
+          />
+          <h4>NumPy</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <h2 class="section-title">My Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img
+            src="{{ url_for('static', filename='gait_project.jpg') }}"
+            alt="Gait System"
+          />
+          <div class="project-info">
+            <h3>Gait Recognition (WIP)</h3>
+            <p>Angle/clothing-invariant identification using CNNs</p>
+            <a href="https://github.com/arpan12345seth" target="_blank"
+              >View Project</a
+            >
+          </div>
+        </div>
+        <div class="project-card">
+          <img
+            src="{{ url_for('static', filename='logistics_project.png') }}"
+            alt="Logistics"
+          />
+          <div class="project-info">
+            <h3>Smart Logistics Optimizer</h3>
+            <p>Backend delivery optimization using TSP</p>
+            <a
+              href="https://github.com/arpan12345seth/route_optimization"
+              target="_blank"
+              >View Project</a
+            >
+          </div>
+        </div>
+        <div class="project-card">
+          <img
+            src="{{ url_for('static', filename='tts_project.jpg') }}"
+            alt="TTS Tool"
+          />
+          <div class="project-info">
+            <h3>Multilingual PDF TTS Tool</h3>
+            <p>Reads PDFs aloud with translation</p>
+            <a
+              href="https://github.com/arpan12345seth/Multilingual-PDF-Text-to-Speech-Converter-with-Translation-Capabilities"
+              target="_blank"
+              >View Project</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group">
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn primary">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <h3>ARPAN SETH</h3>
+        <p>Crafting AI and backend solutions with code & purpose.</p>
+        <div class="social-icons">
+          <a href="https://github.com/arpan12345seth" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://linkedin.com/in/arpan-seth-a68064256" target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="mailto:arpanseth04@gmail.com"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+        <p class="copyright">© 2025 Arpan Seth. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
